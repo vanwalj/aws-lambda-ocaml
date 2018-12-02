@@ -1,6 +1,6 @@
 (library
   (name awsLambda)
-  (wrapped true)
+  (public_name aws-lambda)
   (libraries lwt cohttp cohttp-lwt-unix)
   (preprocess (pps lwt_ppx))
 )
