@@ -1,20 +1,18 @@
 opam-version: "2.0"
-name: "aws-lambda"
-version: "0.1"
 maintainer: "Jordan Van Walleghem <j.vanwall@gmail.com>"
 authors: "Jordan Van Walleghem <j.vanwall@gmail.com>"
 homepage: "https://github.com/vanwalj/aws-lambda-ocaml"
-doc: "https://vanwalj.github.io/aws-lambda-ocaml/"
 bug-reports: "https://github.com/vanwalj/aws-lambda-ocaml/issues"
-dev-repo: "git+https://github.com/vanwalj/aws-lambda-ocaml.git"
 license: "MIT"
+dev-repo: "git+https://github.com/vanwalj/aws-lambda-ocaml.git"
+doc: "https://vanwalj.github.io/aws-lambda-ocaml/"
 
 build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
 
 depends: [
-  "ocaml"
+  "ocaml" {>= "4.02.0"}
   "dune" {build}
   "lwt"
   "lwt_ppx"
@@ -24,6 +22,3 @@ depends: [
 
 synopsis: "Let you use ocaml as a custom runtime in AWS Lambda"
 
-description: """
-`aws-lambda-bootstrap` is a package for creating AWS Lambda handlers. 
-"""
