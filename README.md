@@ -1,3 +1,5 @@
+# Deprecated in favour of the better [aws-lambda-ocaml-runtime](https://github.com/anmonteiro/aws-lambda-ocaml-runtime)
+
 ## AWS Lambda Ocaml Runtime
 
 Ocaml implementation of the lambda runtime API
