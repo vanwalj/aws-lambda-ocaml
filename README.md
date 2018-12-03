@@ -5,7 +5,7 @@ Ocaml implementation of the lambda runtime API
 ## Building and Installing the Runtime
 
 Since AWS Lambda runs on GNU/Linux, you should build this runtime library and your logic on GNU/Linux as well.
-Note that you can also build it using docker, see the example project to know more about it
+Note that you can also build it using docker, see the example project to know more about it https://github.com/vanwalj/aws-lambda-ocaml-example
 
 And here is how a sample `main.ml` would look like:
 
