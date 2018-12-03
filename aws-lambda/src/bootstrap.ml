@@ -47,6 +47,7 @@ let post_invocation_result request_id output =
 
 let rec run handler =
   let%lwt {request_id; body} = get_next_invocation () in
+  let next_run = run handler in
   let%lwt output = handler body in
   let%lwt _ = post_invocation_result request_id output in
-  run handler
+  next_run
