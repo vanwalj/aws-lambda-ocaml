@@ -8,7 +8,11 @@ type lambda_outcome = Success of string | Error of string
 
 exception UnexpectedNextInvocationResponse
 
-let aws_lambda_runtime_api = Sys.getenv "AWS_LAMBDA_RUNTIME_API"
+exception MissingAwsLambdaRuntimeApiEnvVariable
+
+let aws_lambda_runtime_api =
+  try Sys.getenv "AWS_LAMBDA_RUNTIME_API" with _ ->
+    raise MissingAwsLambdaRuntimeApiEnvVariable
 
 let aws_lambda_next_invocation_uri =
   Uri.of_string
