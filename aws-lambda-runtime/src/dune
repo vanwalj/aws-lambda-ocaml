@@ -1,0 +1,6 @@
+(library
+  (name awsLambdaRuntime)
+  (public_name aws-lambda-runtime)
+  (libraries lwt httpaf httpaf-lwt uri)
+  (preprocess (pps lwt_ppx))
+)

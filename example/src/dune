@@ -1,0 +1,9 @@
+(executable
+  (name example)
+  (flags (:standard -ccopt -static -ccopt -O3))
+  (libraries lwt awsLambdaRuntime)
+  (preprocess (pps lwt_ppx)))
+
+(alias
+ (name DEFAULT)
+ (deps example.exe))
